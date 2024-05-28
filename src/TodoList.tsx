@@ -33,6 +33,11 @@ function TodoList() {
                 type="text"
                 value={inputValue}
                 onChange={handleInputChange}
+                onKeyDown={event => {
+                    if(event.key === 'Enter') {
+                        handleAddTodo()
+                    }
+                }}
                 placeholder="Enter a new todo"
             />
             <button onClick={handleAddTodo}>Add</button>
