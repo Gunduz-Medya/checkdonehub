@@ -1,11 +1,16 @@
-.App {
-  color: black;
-  text-align: center;
+li {
+    list-style-type: none;
 }
 
 .container {
   width: 25rem;
   height: 25rem;
   background-color: white;
-
 }
+
+.App {
+    color: black;
+    text-align: center;
+}
+
+
