@@ -1,4 +1,34 @@
 import React, { useState, useEffect } from "react";
+import { DeleteOutlined } from '@ant-design/icons';
+import { Flex, Layout, Input, Button } from 'antd';
+
+const { Header, Footer, Content } = Layout;
+const { Search } = Input;
+
+const headerStyle: React.CSSProperties = {
+    textAlign: 'center',
+    height: 64,
+    paddingInline: 48,
+    lineHeight: '64px',
+    backgroundColor: "#ffffff"
+};
+
+const contentStyle: React.CSSProperties = {
+    textAlign: 'center',
+    minHeight: 120,
+    lineHeight: '120px',
+    backgroundColor: "#ffffff"
+};
+
+const footerStyle: React.CSSProperties = {
+    textAlign: 'center',
+    backgroundColor: "#c9c9c9"
+};
+
+const layoutStyle = {
+    borderRadius: 8,
+    overflow: 'hidden',
+};
 
 function TodoList() {
     const [todos, setTodos] = useState(() => {
@@ -28,29 +58,52 @@ function TodoList() {
 
     return (
         <div>
-            <h2>Todo List</h2>
-            <input
-                type="text"
-                value={inputValue}
-                onChange={handleInputChange}
-                onKeyDown={event => {
-                    if(event.key === 'Enter') {
-                        handleAddTodo()
-                    }
-                }}
-                placeholder="Enter a new todo"
-            />
-            <button onClick={handleAddTodo}>Add</button>
-            <ul>
-                {todos.map((todo: any, index: any) => (
-                    <li key={index}>
-                        {todo}
-                        <button onClick={() => handleDeleteTodo(index)}>
-                            Delete
-                        </button>
-                    </li>
-                ))}
-            </ul>
+            <Flex gap="middle" wrap>
+                <Layout style={layoutStyle}>
+                    <Header style={headerStyle}>Todo List</Header>
+                    <Content style={contentStyle}>
+                        <div>
+                            <Search
+                                placeholder="input search text"
+                                allowClear
+                                enterButton="Add"
+                                onSearch={handleAddTodo}
+                                value={inputValue}
+                                onChange={handleInputChange}
+                                onKeyDown={event => {
+                                    if (event.key === 'Enter') {
+                                        handleAddTodo()
+                                    }
+                                }}
+                            />
+                        </div>
+                        {todos.map((todo: any, index: any) => (
+                            <li key={index}>
+                                {todo}
+                                <Button type="primary" danger icon={<DeleteOutlined />} size={'small'} onClick={() => handleDeleteTodo(index)} />
+                            </li>
+                        ))}
+                        {/* <input
+                            type="text"
+                            value={inputValue}
+                            onChange={handleInputChange}
+                            onKeyDown={event => {
+                                if (event.key === 'Enter') {
+                                    handleAddTodo()
+                                }
+                            }}
+                            placeholder="Enter a new todo"
+                        /> */}
+                        {/* <button onClick={handleAddTodo}>Add</button> */}
+                    </Content>
+                    <Footer style={footerStyle}><ul>
+                        Footer
+                    </ul></Footer>
+                </Layout>
+            </Flex>
+
+
+
         </div>
     );
 }
