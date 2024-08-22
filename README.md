@@ -1,5 +1,5 @@
 # Project Title
-To Do list Chrome Extension
+Simple To Do list Chrome Extension
 
 ## Demo link:
 Access extension at [Coming soon...](https://www.gunduzmedya.com)

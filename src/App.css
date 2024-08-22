@@ -5,6 +5,10 @@
     border: 0;
 }
 
+li {
+  list-style-type: none;
+}
+
 .App {
     color: black;
     text-align: center;
@@ -15,8 +19,16 @@
     width: 25rem;
     height: 25rem;
     background-color: #f9f9f9;
+    overflow: auto;
+    scrollbar-color: #ff4d4f #f3f3f3;
+    scrollbar-width: thin;
 }
 
-li {
-    list-style-type: none;
+.todoHeader {
+  text-align: 'center';
+  height: 64;
+  padding-inline: 48;
+  line-height: '64px';
+  background-color: #ffffff;
 }
+

@@ -64,7 +64,7 @@ function TodoList() {
         <div>
             <Flex gap="middle" wrap>
                 <Layout style={layoutStyle}>
-                    <Header style={headerStyle}>Todo List</Header>
+                    <Header className="todoHeader">Todo List</Header>
                     <Content style={contentStyle}>
                         <div>
                             <Search
@@ -87,22 +87,7 @@ function TodoList() {
                                 <Button type="primary" danger icon={<DeleteOutlined />} size={'small'} onClick={() => handleDeleteTodo(index)} />
                             </div>
                         ))}
-                        {/* <input
-                            type="text"
-                            value={inputValue}
-                            onChange={handleInputChange}
-                            onKeyDown={event => {
-                                if (event.key === 'Enter') {
-                                    handleAddTodo()
-                                }
-                            }}
-                            placeholder="Enter a new todo"
-                        /> */}
-                        {/* <button onClick={handleAddTodo}>Add</button> */}
                     </Content>
-                    <Footer style={footerStyle}><ul>
-                        Footer
-                    </ul></Footer>
                 </Layout>
             </Flex>
         </div>
