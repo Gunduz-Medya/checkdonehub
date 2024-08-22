@@ -15,10 +15,14 @@ const headerStyle: React.CSSProperties = {
 
 const contentStyle: React.CSSProperties = {
     textAlign: 'center',
-    minHeight: 120,
-    lineHeight: '120px',
     backgroundColor: "#ffffff"
 };
+
+const todoTextStyle: React.CSSProperties = {
+    width: '100%',
+    textAlign: 'start',
+    lineHeight: '20px'
+}
 
 const footerStyle: React.CSSProperties = {
     textAlign: 'center',
@@ -78,10 +82,10 @@ function TodoList() {
                             />
                         </div>
                         {todos.map((todo: any, index: any) => (
-                            <li key={index}>
-                                {todo}
+                            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', minHeight: '45px' }} key={index}>
+                                <span style={todoTextStyle}>{todo}</span>
                                 <Button type="primary" danger icon={<DeleteOutlined />} size={'small'} onClick={() => handleDeleteTodo(index)} />
-                            </li>
+                            </div>
                         ))}
                         {/* <input
                             type="text"
@@ -101,9 +105,6 @@ function TodoList() {
                     </ul></Footer>
                 </Layout>
             </Flex>
-
-
-
         </div>
     );
 }

@@ -1,16 +1,22 @@
-li {
-    list-style-type: none;
-}
-
-.container {
-  width: 25rem;
-  height: 25rem;
-  background-color: white;
+* {
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 .App {
     color: black;
     text-align: center;
+    padding: 10px;
 }
 
+.container {
+    width: 25rem;
+    height: 25rem;
+    background-color: #f9f9f9;
+}
 
+li {
+    list-style-type: none;
+}
