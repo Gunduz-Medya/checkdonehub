@@ -1,5 +1,5 @@
 {
-  "name": "gm-simple-todo-chrome-extension",
+  "name": "gm-simple-todo-app-chrome-extension",
   "version": "1.0.0",
   "private": false,
   "dependencies": {
