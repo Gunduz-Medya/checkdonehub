@@ -6,29 +6,80 @@
 }
 
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .App {
     color: black;
     text-align: center;
-    padding: 10px;
 }
 
 .container {
     width: 25rem;
     height: 25rem;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     overflow: auto;
     scrollbar-color: #ff4d4f #f3f3f3;
     scrollbar-width: thin;
 }
 
-.todoHeader {
-  text-align: 'center';
-  height: 64;
-  padding-inline: 48;
-  line-height: '64px';
-  background-color: #ffffff;
+.todoLayout {
+    border-radius: 8;
+    overflow: hidden;
 }
 
+.todoHeader {
+    text-align: center;
+    height: 64;
+    background-color: #ffffff;
+}
+
+.todoInputText {
+    margin: 15px;
+}
+
+.todoContent {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.todoListItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 65px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15), 0 1px 9px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.todoListItemIcon {
+    margin-left: 10px;
+    color: #1add19;
+    font-size: 23px;
+}
+
+.todoListItemContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.todoText {
+    width: 95%;
+    text-align: start;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+.todoDate {
+    text-align: start;
+    font-size: smaller;
+    color: #b1b1b1;
+    margin-left: 10px;
+}
+
+.todoDeleteButton {
+    margin-right: 10px;
+}
