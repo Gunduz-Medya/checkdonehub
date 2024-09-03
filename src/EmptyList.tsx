@@ -1,6 +1,6 @@
 
 export default function EmptyList() {
   return (
-    <div className="emptyList">EmptyList</div>
+    <div className="emptyList">Nothing to do... :(</div>
   )
 }

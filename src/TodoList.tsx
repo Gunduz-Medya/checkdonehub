@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { DeleteOutlined, FieldTimeOutlined } from '@ant-design/icons';
+import { DeleteOutlined, FieldTimeOutlined, CheckCircleOutlined } from '@ant-design/icons';
 import { Flex, Layout, Input, Button } from 'antd';
 import EmptyList from "./EmptyList";
 
@@ -23,8 +23,8 @@ function TodoList() {
 
     const handleAddTodo = () => {
         if (inputValue.trim() !== "") {
-            const todoDate = new Date().toLocaleString( );
-            
+            const todoDate = new Date().toLocaleString();
+
             setTodos([[inputValue, todoDate], ...todos]);
             setInputValue("");
         }
@@ -33,12 +33,12 @@ function TodoList() {
     const handleDeleteTodo = (index: any) => {
         setTodos(todos.filter((_: any, todo: any) => todo !== index));
     };
-console.log(todos)
+
     return (
         <div>
             <Flex gap="middle" wrap>
                 <Layout className="todoLayout">
-                    <Header className="todoHeader">Check Done Hub</Header>
+                    <Header className="todoHeader">Check Done Hub <CheckCircleOutlined /></Header>
                     <Content className="todoContent">
                         <div className="todoInputText">
                             <Search

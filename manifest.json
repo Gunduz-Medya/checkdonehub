@@ -2,7 +2,7 @@
     "version": "1.0.0",
     "manifest_version": 3,
     "name": "Check Done Hub",
-    "description": "This is a Check Done Hub Chrome extension built with React and TypeScript",
+    "description": "Check Done Hub is the simplest to do app ever.",
     "action": {
         "default_popup": "js/index.html",
         "default_title": "Check Done Hub"
