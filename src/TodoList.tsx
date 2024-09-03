@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { DeleteOutlined, FieldTimeOutlined } from '@ant-design/icons';
 import { Flex, Layout, Input, Button } from 'antd';
+import EmptyList from "./EmptyList";
 
 const { Header, Content } = Layout;
 const { Search } = Input;
@@ -32,12 +33,12 @@ function TodoList() {
     const handleDeleteTodo = (index: any) => {
         setTodos(todos.filter((_: any, todo: any) => todo !== index));
     };
-
+console.log(todos)
     return (
         <div>
             <Flex gap="middle" wrap>
                 <Layout className="todoLayout">
-                    <Header className="todoHeader">Todo List</Header>
+                    <Header className="todoHeader">Check Done Hub</Header>
                     <Content className="todoContent">
                         <div className="todoInputText">
                             <Search
@@ -53,7 +54,7 @@ function TodoList() {
                                 }}
                             />
                         </div>
-                        {todos.map((todo: any, index: any) => (
+                        {todos.length ? todos.map((todo: any, index: any) => (
                             <div className="todoListItem" key={index}>
                                 <FieldTimeOutlined className="todoListItemIcon" />
                                 <div className="todoListItemContainer">
@@ -62,7 +63,7 @@ function TodoList() {
                                 </div>
                                 <Button className="todoDeleteButton" type="primary" danger icon={<DeleteOutlined />} size={'small'} onClick={() => handleDeleteTodo(index)} />
                             </div>
-                        ))}
+                        )) : <EmptyList />}
                     </Content>
                 </Layout>
             </Flex>
