@@ -1,10 +1,10 @@
 {
     "version": "1.0.0",
     "manifest_version": 3,
-    "name": "Simple ToDo App Chrome Extension",
-    "description": "This is a Simple ToDo App Chrome extension built with React and TypeScript",
+    "name": "Check Done Hub",
+    "description": "This is a Check Done Hub Chrome extension built with React and TypeScript",
     "action": {
         "default_popup": "js/index.html",
-        "default_title": "Simple ToDo App"
+        "default_title": "Check Done Hub"
     }
 }

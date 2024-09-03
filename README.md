@@ -1,5 +1,5 @@
 # Project Title
-Simple To Do list Chrome Extension
+Check Done Hub
 
 ## Demo link:
 Access extension at [Coming soon...](https://www.gunduzmedya.com)
