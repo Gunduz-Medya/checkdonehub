@@ -2,7 +2,7 @@
     "version": "1.0.0",
     "manifest_version": 3,
     "name": "Check Done Hub",
-    "description": "Check Done Hub is the simplest to do app ever.",
+    "description": "Check Done Hub is a minimalist to-do list app that helps you stay organized with zero fuss.",
     "icons": {
         "16" : "icons/icon16.png",
         "48" : "icons/icon48.png",

@@ -1,5 +1,5 @@
-# Project Title
-Check Done Hub
+# Project
+Check Done Hub is a minimalist to-do list app that helps you stay organized with zero fuss.
 
 ## Demo link:
 Access extension at [Coming soon...](https://www.gunduzmedya.com)
